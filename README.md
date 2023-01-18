@@ -32,12 +32,12 @@ cdk destroy --all
 https://www.sccbrasil.com/blog/aws/cdk-stack-construct.html
 
 ## structuring the project
-structure your project ( and the stacks) in layers
-iam
-vpc
-kms/ssm
-storage
-databases
-computing
-monitoring
-etc
+structure your project ( and the stacks) in layers:
+iam  
+vpc  
+kms/ssm  
+storage  
+databases  
+computing  
+monitoring  
+etc  
