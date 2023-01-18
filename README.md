@@ -1,65 +1,43 @@
+## aws docu 
+https://cdkworkshop.com/
 
-# Welcome to your CDK Python project!
+## commands
+mkdir cdk_ws1
+cd cdk_ws1
 
-You should explore the contents of this project. It demonstrates a CDK app with an instance of a stack (`cdk_ws1_stack`)
-which contains an Amazon SQS queue that is subscribed to an Amazon SNS topic.
+cdk init sample-app --language python
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## on windows :
+.venv\Scripts\activate.bat
 
-This project is set up like a standard Python project.  The initialization process also creates
-a virtualenv within this project, stored under the .venv directory.  To create the virtualenv
-it assumes that there is a `python3` executable in your path with access to the `venv` package.
-If for any reason the automatic creation of the virtualenv fails, you can create the virtualenv
-manually once the init process completes.
+pip install -r requirements.txt
 
-To manually create a virtualenv on MacOS and Linux:
+aws configure
 
-```
-$ python -m venv .venv
-```
+cdk synth
 
-After the init process completes and the virtualenv is created, you can use the following
-step to activate your virtualenv.
+cdk bootstrap
 
-```
-$ source .venv/bin/activate
-```
+cdk ls
 
-If you are a Windows platform, you would activate the virtualenv like this:
+cdk deploy
+#or
+cdk deploy --all
 
-```
-% .venv\Scripts\activate.bat
-```
+# at the very end !
+cdk destroy 
+cdk destroy --all
 
-Once the virtualenv is activated, you can install the required dependencies.
+## further infos on stacks and constructs
+https://www.sccbrasil.com/blog/aws/cdk-stack-construct.html
 
-```
-$ pip install -r requirements.txt
-```
-
-At this point you can now synthesize the CloudFormation template for this code.
-
-```
-$ cdk synth
-```
-
-You can now begin exploring the source code, contained in the hello directory.
-There is also a very trivial test included that can be run like this:
-
-```
-$ pytest
-```
-
-To add additional dependencies, for example other CDK libraries, just add to
-your requirements.txt file and rerun the `pip install -r requirements.txt`
-command.
-
-## Useful commands
-
- * `cdk ls`          list all stacks in the app
- * `cdk synth`       emits the synthesized CloudFormation template
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk docs`        open CDK documentation
-
-Enjoy!
+## structuring the project
+structure your project ( and the stacks) in layers
+iam
+vpc
+kms/ssm
+storage
+databases
+computing
+monitoring
+etc
