@@ -7,7 +7,7 @@ cd cdk_ws1
 
 cdk init sample-app --language python
 
-## on windows :
+on windows :
 .venv\Scripts\activate.bat
 
 pip install -r requirements.txt
@@ -24,7 +24,7 @@ cdk deploy
 #or
 cdk deploy --all
 
-# at the very end !
+## at the very end !
 cdk destroy 
 cdk destroy --all
 
